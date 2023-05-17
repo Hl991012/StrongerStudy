@@ -8,6 +8,7 @@ using UnityEngine;
 public class EnemyDataSo : ScriptableObject
 {
     public string id;
+    public int maxHp;
     public float attackInterval;
     public float moveSpeed;
 }

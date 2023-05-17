@@ -7,11 +7,11 @@ public class EnemyBase : MonoBehaviour, IRecyclable
 {
     public string ID { get; set; }
 
-    private EnemyModel enemyModel;
+    public EnemyModel EnemyModel { get; private set; }
 
-    public void Init(EnemyModel model)
+    public virtual void Init(EnemyModel model)
     {
-        enemyModel = model;
-        ID = enemyModel.metaModel.id;
+        EnemyModel = model;
+        ID = EnemyModel.metaModel.id;
     }
 }

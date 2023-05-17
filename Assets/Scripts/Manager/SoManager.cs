@@ -16,7 +16,7 @@ public class SoManager : ScriptableObject
         {
             if (instance == null)
             {
-                instance = Resources.Load<SoManager>("So/SoManager");
+                instance = Resources.Load<SoManager>("So/SOCenter");
             }
 
             return instance;

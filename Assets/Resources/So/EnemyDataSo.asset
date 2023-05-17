@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: EnemyDataSo
   m_EditorClassIdentifier: 
   id: Enemy
-  attackInterval: 0
-  moveSpeed: 0
+  maxHp: 100
+  attackInterval: 2
+  moveSpeed: 1

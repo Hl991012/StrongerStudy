@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class MainPanel : MonoBehaviour
 {
@@ -13,7 +14,8 @@ public class MainPanel : MonoBehaviour
     {
         startGameBtn.onClick.AddListener(() =>
         {
-            EnemyManager.Instance.CreatEnemy("Enemy", 1);
+            var worldPos = new Vector3(Random.Range(5, 6), 0, Random.Range(5, 6));
+            EnemyManager.Instance.CreatEnemy("Enemy", worldPos, Quaternion.LookRotation(Vector3.zero - worldPos, Vector3.up));
         });
     }
 }
