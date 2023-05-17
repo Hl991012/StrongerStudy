@@ -25,13 +25,21 @@ public class EnemyManager : Singleton<EnemyManager>
         enemyList.Add(enemy);
     }
 
-    // public Enemy GetMinDistanceEnemy(Vector3 startPos)
-    // {
-    //     var minDis = int.MaxValue;
-    //     Enemy enemy = null;
-    //     foreach (var item in enemyList)
-    //     {
-    //         if(Vector3.Distance(startPos, item.transform.position))
-    //     }
-    // }
+    public Enemy GetMinDistanceEnemy(Vector3 startPos)
+    {
+        if (enemyList.Count < 0)
+        {
+            return null;
+        }
+        var minDis = float.MaxValue;
+        Enemy enemy = null;
+        foreach (var item in enemyList)
+        {
+            var temp = Vector3.Distance(startPos, item.transform.position);
+            if (!(temp < minDis)) continue;
+            minDis = temp;
+            enemy = (Enemy)item;
+        }
+        return enemy;
+    }
 }
