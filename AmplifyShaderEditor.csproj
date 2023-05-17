@@ -531,7 +531,6 @@
      <None Include="Assets\Plugins\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_WorldSpaceLightPosNode.shader" />
      <Folder Include="Assets\Plugins\AmplifyShaderEditor\Plugins\Editor\CustomDrawers" />
      <None Include="Assets\Plugins\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_FogParams.shader" />
-     <Folder Include="Assets\Plugins\AmplifyShaderEditor\Examples" />
      <Folder Include="Assets\Plugins\AmplifyShaderEditor\Plugins\Editor\Graphs" />
      <None Include="Assets\Plugins\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_TanhOpNode.shader" />
      <Folder Include="Assets\Plugins\AmplifyShaderEditor\Plugins\Editor\Nodes\SRP" />
@@ -549,7 +548,6 @@
      <Folder Include="Assets\Plugins\AmplifyShaderEditor\Plugins\EditorResources\ShaderFunctions" />
      <Folder Include="Assets\Plugins\AmplifyShaderEditor\Plugins\Editor\Nodes\Operators" />
      <None Include="Assets\Plugins\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_GetLocalVarNode.shader" />
-     <None Include="Assets\Plugins\AmplifyShaderEditor\Examples\DownloadSamplesInstructions.txt" />
      <None Include="Assets\Plugins\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_InstanceIDNode.shader" />
      <None Include="Assets\Plugins\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_Texture2D.shader" />
      <Folder Include="Assets\Plugins\AmplifyShaderEditor\Plugins" />
@@ -578,7 +576,6 @@
      <None Include="Assets\Plugins\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_CoshOpNode.shader" />
      <Folder Include="Assets\Plugins\AmplifyShaderEditor\Plugins\Editor\Nodes\Misc\Transformation" />
      <None Include="Assets\Plugins\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_TextureTransform.shader" />
-     <None Include="Assets\Plugins\AmplifyShaderEditor\Examples\Credits.txt" />
      <None Include="Assets\Plugins\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_SimpleTimeNode.shader" />
      <None Include="Assets\Plugins\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_ObjectScaleNode.shader" />
      <None Include="Assets\Plugins\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_RoundOpNode.shader" />
@@ -704,7 +701,6 @@
      <None Include="Assets\Plugins\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_LengthOpNode.shader" />
      <None Include="Assets\Plugins\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_StepOpNode.shader" />
      <Folder Include="Assets\Plugins\AmplifyShaderEditor\Plugins\Editor\Nodes\Constants\ShaderVariables\Transform" />
-     <None Include="Assets\Plugins\AmplifyShaderEditor\Examples\README Samples.txt" />
      <None Include="Assets\Plugins\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_TFHCIf.shader" />
      <None Include="Assets\Plugins\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_ColorNode.shader" />
      <None Include="Assets\Plugins\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_TexCoordVertexDataNode.shader" />
