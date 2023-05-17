@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5675ed4030f42604183d485b0b9366c1, type: 3}
-  m_Name: MainWeaponSO
+  m_Script: {fileID: 11500000, guid: 3a189bb168d8d90478a09ea08c2f3d72, type: 3}
+  m_Name: DefaultObject
   m_EditorClassIdentifier: 
-  id: 
-  attackInterval: 
+  m_AddressableAssetSettingsGuid: c0f93c330c6690042b7ad8e4dd142fb1

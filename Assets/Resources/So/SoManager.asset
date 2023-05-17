@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5675ed4030f42604183d485b0b9366c1, type: 3}
-  m_Name: MainWeaponSO
+  m_Script: {fileID: 11500000, guid: 0869cb6e8e3b7b64ebfbc06658af6721, type: 3}
+  m_Name: SoManager
   m_EditorClassIdentifier: 
-  id: 
-  attackInterval: 
+  enemyData: {fileID: 11400000, guid: 41ff1b1a318e4434790785206cdbe5ed, type: 2}
+  mainWeaponSo: {fileID: 11400000, guid: ac7fa28bf9ed6bb4f96b0480705678d8, type: 2}
