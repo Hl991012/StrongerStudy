@@ -13,4 +13,16 @@ MonoBehaviour:
   m_Name: MainWeaponSo
   m_EditorClassIdentifier: 
   id: 
-  attackInterval: 
+  attackInterval:
+  - 3
+  - 2.8
+  - 2.6
+  - 2.4
+  - 2.2
+  - 2
+  - 1.8
+  - 1.6
+  - 1.4
+  - 1.2
+  attackRange: 3
+  levelToEnergyStone: 
