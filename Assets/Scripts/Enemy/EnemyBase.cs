@@ -12,6 +12,11 @@ public class EnemyBase : MonoBehaviour, IRecyclable
     public virtual void Init(EnemyModel model)
     {
         EnemyModel = model;
-        ID = EnemyModel.metaModel.id;
+        ID = EnemyModel.metaModel.metaId;
+    }
+
+    public virtual void BeAttacked(int damage)
+    {
+        EnemyModel.curHp -= damage;
     }
 }

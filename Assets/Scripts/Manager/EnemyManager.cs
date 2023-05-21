@@ -4,41 +4,56 @@ using UnityEngine;
 
 public class EnemyManager : Singleton<EnemyManager>
 {
-    private List<EnemyBase> enemyList = new();
+    private Dictionary<string, EnemyBase> enemyDict = new();
 
-    public void CreatEnemy(string id, Vector3 worldPos, Quaternion quaternion)
+    public void CreatEnemy(string metaId, Vector3 worldPos, Quaternion quaternion)
     {
-        var enemy = GameObjectPool.Instance.GetFromPool<Enemy>(id);
-        var metaModel = SoManager.Instance.GetEnemySo(id);
+        var enemy = GameObjectPool.Instance.GetFromPool<Enemy>(metaId);
+        var metaModel = SoManager.Instance.GetEnemySo(metaId);
+        var guid = GameHelper.GetGUID();
         if (metaModel == null)
         {
-            Debug.LogError("不存在" + id + "的So文件");
+            Debug.LogError("不存在" + metaId + "的So文件");
         }
         else
         {
-            enemy.Init(new EnemyModel(metaModel));
+            var enemyModel = new EnemyModel(guid, metaModel);
+            enemy.Init(enemyModel);
         }
-
         var transform = enemy.transform;
         transform.position = worldPos;
         transform.rotation = quaternion;
-        enemyList.Add(enemy);
+        if (!enemyDict.ContainsKey(guid))
+        {
+            enemyDict.Add(guid, enemy);
+        }
+    }
+
+    public void ReturnEnemy(EnemyBase enemy)
+    {
+        enemy.gameObject.SetActive(false);
+        if (enemyDict.ContainsKey(enemy.EnemyModel.id))
+        {
+            enemyDict.Remove(enemy.EnemyModel.id);
+        }
+        GameObjectPool.Instance.ReturnToPool(enemy);
     }
 
     public Enemy GetMinDistanceEnemy(Vector3 startPos)
     {
-        if (enemyList.Count < 0)
+        if (enemyDict.Count < 0)
         {
             return null;
         }
-        var minDis = float.MaxValue;
+        
+        var distance = float.MaxValue;
         Enemy enemy = null;
-        foreach (var item in enemyList)
+        foreach (var item in enemyDict)
         {
-            var temp = Vector3.Distance(startPos, item.transform.position);
-            if (!(temp < minDis)) continue;
-            minDis = temp;
-            enemy = (Enemy)item;
+            var temp = Vector3.Distance(startPos, item.Value.transform.position);
+            if (!(temp < distance)) continue;
+            distance = temp;
+            enemy = (Enemy)item.Value;
         }
         return enemy;
     }

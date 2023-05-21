@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5675ed4030f42604183d485b0b9366c1, type: 3}
-  m_Name: MainWeaponSo
+  m_Name: MainWeaponSO
   m_EditorClassIdentifier: 
-  id: 
+  id: HeavyMachineGuns
   attackInterval:
   - 3
   - 2.8
@@ -24,5 +24,6 @@ MonoBehaviour:
   - 1.6
   - 1.4
   - 1.2
-  attackRange: 3
+  attackRange: 15
   levelToEnergyStone: 
+  levelToAttackDamage: 1e00000028000000

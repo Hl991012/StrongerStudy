@@ -27,11 +27,22 @@ public class SoManager : ScriptableObject
 
     #endregion
 
+    public DefaultConfigSo defaultConfigSo;
+
+    public MainWeaponSo mainWeaponSo;
+    
     [SerializeField] private SerializableDictionary<string, EnemyDataSo> enemyDict = new();
+    [SerializeField] private SerializableDictionary<string, MainWeaponSo> mainWeaponSoDict = new();
 
     public EnemyDataSo GetEnemySo(string id)
     {
         enemyDict.TryGetValue(id, out var enemyDataSo);
         return enemyDataSo;
+    }
+
+    public MainWeaponSo GetMainWeaponSo(string id)
+    {
+        mainWeaponSoDict.TryGetValue(id, out var mainWeaponSo);
+        return mainWeaponSo;
     }
 }

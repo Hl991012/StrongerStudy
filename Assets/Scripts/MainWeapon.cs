@@ -6,8 +6,20 @@ using UnityEngine;
 
 public class MainWeapon : MonoBehaviour
 {
-    private MainWeaponModel mainWeaponModel = new MainWeaponModel();
+    [SerializeField] private Transform firePos;
     
+    private MainWeaponModel mainWeaponModel;
+
+    private EnemyBase attackTarget;
+
+    private void Awake()
+    {
+        mainWeaponModel = new MainWeaponModel
+        {
+            metaModel = SoManager.Instance.mainWeaponSo
+        };
+    }
+
     private void Update()
     {
         Attack();
@@ -20,13 +32,21 @@ public class MainWeapon : MonoBehaviour
             return;
         }
         
-        var targetEnemy = EnemyManager.Instance.GetMinDistanceEnemy(transform.position);
-        if(targetEnemy == null) return;
-        
-        if (targetEnemy != null)
+        if (attackTarget == null)
         {
-            Debug.Log("开始攻击");
+            attackTarget = EnemyManager.Instance.GetMinDistanceEnemy(transform.position);
+        }
+
+        if(attackTarget == null) return;
+
+        var distance = Vector3.Distance(transform.position, attackTarget.transform.position);
+        if (distance < mainWeaponModel.metaModel.attackRange)
+        {
+            Debug.LogError("在攻击范围内，主武器开始攻击");
             mainWeaponModel.lastAttackTime = Time.time;
+            TrackMissiles trackMissiles = GameObjectPool.Instance.GetFromPool<TrackMissiles>("TrackMissiles");
+            trackMissiles.transform.position = firePos.position;
+            trackMissiles.Init(attackTarget);
         }
     }
 }

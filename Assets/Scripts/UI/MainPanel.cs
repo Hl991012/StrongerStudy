@@ -14,7 +14,7 @@ public class MainPanel : MonoBehaviour
     {
         startGameBtn.onClick.AddListener(() =>
         {
-            var worldPos = new Vector3(Random.Range(5, 6), 0, Random.Range(5, 6));
+            var worldPos = new Vector3(Random.Range(15, 16), 0, Random.Range(15, 16));
             EnemyManager.Instance.CreatEnemy("Enemy", worldPos, Quaternion.LookRotation(Vector3.zero - worldPos, Vector3.up));
         });
     }

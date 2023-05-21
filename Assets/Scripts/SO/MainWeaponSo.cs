@@ -15,6 +15,8 @@ public class MainWeaponSo : ScriptableObject
     //场内升级对应的能量石
     public int[] levelToEnergyStone;
 
+    public int[] levelToAttackDamage;
+
     public float LevelToAttackInterval(int level)
     {
         if (level >= attackInterval.Length)
@@ -24,12 +26,24 @@ public class MainWeaponSo : ScriptableObject
 
         return attackInterval[level];
     }
+    
+    public int LevelToAttackDamage(int level)
+    {
+        if (level >= levelToAttackDamage.Length)
+        {
+            return levelToAttackDamage[0];
+        }
+
+        return levelToAttackDamage[level];
+    }
 }
 
 [Serializable]
 public class MainWeaponModel
 {
     public int level = 0;
+    public bool isUnlocked = false;
+    
     [JsonIgnore]
     public int curEnergyStone;
 

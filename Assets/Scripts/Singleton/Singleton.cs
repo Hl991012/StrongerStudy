@@ -16,7 +16,12 @@ public class Singleton<T> where T : new()
         {
             lock (lockObj)
             {
-                return instance ?? new T();
+                if (instance == null)
+                {
+                    instance = new();
+                }
+
+                return instance;
             }
             
         }

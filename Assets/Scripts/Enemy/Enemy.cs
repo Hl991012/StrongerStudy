@@ -1,10 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Enemy : EnemyBase
 {
+    [SerializeField] private TextMeshPro hp;
+    
     private enum EnemyState
     {
         Idle,
@@ -19,6 +22,7 @@ public class Enemy : EnemyBase
     {
         base.Init(model);
         ChangeState(EnemyState.Move);
+        hp.text = EnemyModel.curHp.ToString();
     }
 
     private void Update()
@@ -47,7 +51,7 @@ public class Enemy : EnemyBase
                 transform.Translate(Vector3.forward * (Time.deltaTime * EnemyModel.metaModel.moveSpeed), Space.Self);
 
                 //敌人在攻击范围外
-                if (Vector3.Distance(Vector3.zero, transform.position) <= 2)
+                if (Vector3.Distance(Vector3.zero, transform.position) <= EnemyModel.metaModel.attackRange)
                 {
                     ChangeState(EnemyState.Idle);
                 }
@@ -79,7 +83,7 @@ public class Enemy : EnemyBase
                 Attack();
                 break;
             case EnemyState.Death:
-                GameObjectPool.Instance.ReturnToPool(this);
+                EnemyManager.Instance.ReturnEnemy(this);
                 break;
             default:
                 break;
@@ -90,5 +94,11 @@ public class Enemy : EnemyBase
     {
         EnemyModel.lastAttackTime = Time.time;
         Debug.LogError("攻击");
+    }
+
+    public override void BeAttacked(int damage)
+    {
+        base.BeAttacked(damage);
+        hp.text = EnemyModel.curHp.ToString();
     }
 }

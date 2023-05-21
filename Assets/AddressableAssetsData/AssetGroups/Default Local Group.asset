@@ -21,6 +21,10 @@ MonoBehaviour:
     m_Address: Enemy
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 553bd2b5afe74ac4797bfa41dd1b8c80
+    m_Address: TrackMissiles
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: c0f93c330c6690042b7ad8e4dd142fb1, type: 2}
   m_SchemaSet:

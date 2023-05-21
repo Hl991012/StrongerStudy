@@ -21,11 +21,6 @@ public class LoadSceneAsync : MonoBehaviour
     private void Update()
     {
         ShowBar();
-
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            asyncOperation.allowSceneActivation = true;
-        }
     }
 
     private IEnumerator StartLoadScene()
@@ -33,7 +28,6 @@ public class LoadSceneAsync : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         asyncOperation = SceneManager.LoadSceneAsync(1);
         asyncOperation.allowSceneActivation = false;
-        Debug.Log(asyncOperation.isDone);
         yield return asyncOperation;
     }
 
@@ -45,13 +39,12 @@ public class LoadSceneAsync : MonoBehaviour
     private int bar = 0;
     void ShowBar()
     {
-        int theProgress = 0;
+        var theProgress = 0;
         if (asyncOperation == null)
         {
             return;
         }
         
-        Debug.Log(asyncOperation.progress);
         if (asyncOperation.progress < 0.9f)
         {
             theProgress = (int)asyncOperation.progress * 100;
@@ -70,7 +63,7 @@ public class LoadSceneAsync : MonoBehaviour
 
         if (bar == 100)
         {
-            //asyncOperation.allowSceneActivation = true;
+            asyncOperation.allowSceneActivation = true;
         }
         
 

@@ -1,10 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 
-public class SingletonMono<T> where T : Component
+public class SingletonMono<T> : MonoBehaviour where T : Component
 {
     private static T instance;
 
@@ -18,16 +20,17 @@ public class SingletonMono<T> where T : Component
         {
             lock (lockObj)
             {
-                if (instance == null)
-                {
-                    instance = Object.FindObjectOfType(typeof(T)).GetComponent<T>();
-                }
+                // if (instance == null)
+                // {
+                //     instance = GameObject.FindObjectOfType(typeof(T)).GetComponent<T>();
+                // }
 
                 if (instance == null)
                 {
                     instance = new GameObject().AddComponent<T>();
+                    DontDestroyOnLoad(instance);
                 }
-
+                
                 return instance;   
             }
         }
