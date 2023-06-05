@@ -1,6 +1,8 @@
 using System.Collections;
+using Cysharp.Threading.Tasks;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -16,11 +18,19 @@ public class LoadSceneAsync : MonoBehaviour
     private void Awake()
     {
         coroutine = StartCoroutine(StartLoadScene());
+         SceneManager.LoadSceneAsync("GameScene").ToUniTask(Progress.Create<float>(
+             (p) =>
+         {
+             progressSlider.fillAmount = p;
+             progress.text = $"{p * 100:F2}%";
+         }));
+
+        
     }
 
     private void Update()
     {
-        ShowBar();
+        //ShowBar();
     }
 
     private IEnumerator StartLoadScene()
@@ -33,7 +43,7 @@ public class LoadSceneAsync : MonoBehaviour
 
     private void OnDestroy()
     {
-        StopCoroutine(coroutine);
+        //StopCoroutine(coroutine);
     }
 
     private int bar = 0;

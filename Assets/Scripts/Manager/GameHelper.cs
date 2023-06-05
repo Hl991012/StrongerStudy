@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
+using Cysharp.Threading.Tasks;
 using Newtonsoft.Json;
 using UnityEngine;
 
@@ -27,7 +28,7 @@ public static class GameHelper
         streamWriter.WriteAsync(JsonConvert.SerializeObject(model)).Dispose();
     }
 
-    public static async Task<T> LoadDate<T>(string dataPath) where T : new()
+    public static async UniTask<T> LoadDate<T>(string dataPath) where T : new()
     {
         await using var fileStream = new FileStream(dataPath + ".json", FileMode.OpenOrCreate, FileAccess.Read, FileShare.ReadWrite);
         using var streamRender = new StreamReader(fileStream);

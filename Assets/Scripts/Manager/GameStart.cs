@@ -14,7 +14,8 @@ public class GameStart : MonoBehaviour
 
     private void Init()
     {
-        WeaponManager.Instance.Init();
+        var init =  WeaponManager.Instance.Init();
+        UniTask.WhenAll(init);
     }
 
     private void Save()
