@@ -16,7 +16,7 @@ public class Test : MonoBehaviour
     {
         unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
         curActivity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
-        
+
         startSpeakBtn.onClick.AddListener(StartSpeak);
     }
 

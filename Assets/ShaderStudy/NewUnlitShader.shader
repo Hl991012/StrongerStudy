@@ -1,0 +1,6 @@
+Shader "MyShader/SimpleShader"
+{
+	SubShader{
+
+	}
+}
