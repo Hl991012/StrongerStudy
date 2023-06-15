@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using Cysharp.Threading.Tasks;
 using Newtonsoft.Json;
 using UnityEngine;
 
@@ -17,7 +18,7 @@ public class WeaponManager : Singleton<WeaponManager>
         public SerializableDictionary<string, MainWeaponModel> mainWeaponModelDict = new();
     }
 
-    public async void Init()
+    public async UniTask Init()
     {
         //数据初始化
         saveModel = await GameHelper.LoadDate<SaveModel>(GameHelper.DataSavePath + nameof(WeaponManager)); 
