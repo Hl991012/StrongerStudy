@@ -13,16 +13,17 @@ using UnityEngine.UI;
 
 public class ThreadTest : MonoBehaviour
 {
-    private Thread subThread;
-    private Thread mainThread;
-    [SerializeField] private RawImage Image;
-    [SerializeField] private Button button;
+    // private Thread subThread;
+    // private Thread mainThread;
+    // [SerializeField] private RawImage Image;
+    // [SerializeField] private Button button;
     private void Awake()
     {
-        button.OnClickAsAsyncEnumerable().Where((x, i) => i % 2 == 0).ForEachAsync(_ =>
-        {
-            Debug.LogError(111);
-        });
+        Debug.Log(SystemInfo.graphicsDeviceVendorID);
+        // button.OnClickAsAsyncEnumerable().Where((x, i) => i % 2 == 0).ForEachAsync(_ =>
+        // {
+        //     Debug.LogError(111);
+        // });
 
         // mainThread = Thread.CurrentThread;
         // ThreadStart threadStart = new ThreadStart(() =>
@@ -143,7 +144,7 @@ public class ThreadTest : MonoBehaviour
         var webRequest = UnityWebRequestTexture.GetTexture("https://lmg.jj20.com/up/allimg/tp09/210H51R3313N3-0-lp.jpg");
         var result = await webRequest.SendWebRequest();
         var tex = ((DownloadHandlerTexture)result.downloadHandler).texture;
-        Image.texture = tex;
+        //Image.texture = tex;
     }
 
     //private CancellationToken m_token = new CancellationToken();

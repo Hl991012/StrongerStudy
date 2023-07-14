@@ -1,18 +1,15 @@
-// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
-
-// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
-
 Shader "Unlit/DiffusePerVertex"
 {
     Properties{
-        _DiffuseColor("DiffuseColor", Color) = (1.0, 1.0, 1.0, 1.0)
+        _DiffuseColor ("_DiffuseColor", Color) = (1, 1, 1, 1)
     }
     
-    SubShader{
-        
-        Pass{
+    SubShader
+    {
+        Pass
+        {
             
-            Tags{ "LightModel" = "ForwardBase" }
+            //Tags{ "LightModel" = "ForwardBase" }
             
             CGPROGRAM
 
@@ -20,40 +17,45 @@ Shader "Unlit/DiffusePerVertex"
             #pragma fragment frag
 
             #include "UnityCG.cginc"
+            #include "Lighting.cginc"
 
-            half4 _Color;
+            float4 _DiffuseColor;
 
             struct a2v
             {
                 float4 position : POSITION;
-                half4 color : COLOR0;
-                float4 texCoord : TEXCOORD0;
                 float3 normal : NORMAL;
             };
 
             struct v2f
             {
                 float4 position : POSITION;
-                half4 color : COLOR0;
+                float3 color : Color;
             };
 
             v2f vert(a2v v)
             {
-                v2f f;
-                f.position = UnityObjectToClipPos(v.position);
-
-                float3 worldNormal = normalize(mul(v.normal, (float3x3)unity_WorldToObject));
+                v2f o;
+                o.position = UnityObjectToClipPos(v.position);
+                
+                float3 worldNormal = UnityObjectToWorldNormal(v.normal);
                 float3 worldLight = normalize(_WorldSpaceLightPos0.xyz);
 
-                half3 diffuseColor = unity_LightColor0 * _Color * max(0, dot(worldNormal, worldLight));
+                //环境光颜色
+                float3 ambinet = UNITY_LIGHTMODEL_AMBIENT.xyz;
+
+                float3 lightColor = _LightColor0.xyz;
+
+                float3 diffuseColor = _DiffuseColor * lightColor * max(0, dot(worldLight, worldNormal));
                 
-                f.color = half4(diffuseColor * v.color.rgb, 1); 
-                return f;
+                o.color = diffuseColor + ambinet; 
+                return o;
             }
             
-            float frag(v2f f) : SV_Target
+            float4 frag(v2f i) : SV_Target
             {
-                return f.color;
+                float4 color = float4(i.color, 1);
+                return color;
             }
             
             ENDCG
