@@ -37,7 +37,7 @@ namespace TEngine
                         }
                         else
                         {
-                            Log.Error("文件夹不存在 Path=" + dir);
+                            //Log.Error("文件夹不存在 Path=" + dir);
                             return false;
                         }
                     }
@@ -66,7 +66,7 @@ namespace TEngine
 #if UNITY_EDITOR
                             EditorUtility.DisplayDialog("Tips", "文件夹不存在", "CANCEL");
 #endif
-                            Log.Error("文件夹不存在 Path=" + dir);
+                            //Log.Error("文件夹不存在 Path=" + dir);
                             return false;
                         }
                     }
@@ -119,7 +119,7 @@ namespace TEngine
                 }
                 catch (Exception ex)
                 {
-                    Log.Error("to md5 fail,error:" + ex.Message);
+                    //Log.Error("to md5 fail,error:" + ex.Message);
                     return "Error";
                 }
             }

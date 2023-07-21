@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using System.Reflection;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Text;
 using UnityEngine;
 using System.Threading;
 using System.Xml.Serialization;
@@ -258,5 +259,17 @@ public class ThreadTest : MonoBehaviour
     public class TestClasss
     {
         public int a = 10;
+    }
+    
+    public string Convert(string s, int numRows)
+    {
+        System.Text.StringBuilder sb = new StringBuilder();
+
+        var index = numRows;
+        for (int i = 0; i < s.Length; i++)
+        {
+            
+        }
+        return sb.ToString();
     }
 }
