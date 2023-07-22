@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using System.Reflection;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Text;
 using UnityEngine;
 using System.Threading;
 using System.Xml.Serialization;
@@ -13,16 +14,17 @@ using UnityEngine.UI;
 
 public class ThreadTest : MonoBehaviour
 {
-    private Thread subThread;
-    private Thread mainThread;
-    [SerializeField] private RawImage Image;
-    [SerializeField] private Button button;
+    // private Thread subThread;
+    // private Thread mainThread;
+    // [SerializeField] private RawImage Image;
+    // [SerializeField] private Button button;
     private void Awake()
     {
-        button.OnClickAsAsyncEnumerable().Where((x, i) => i % 2 == 0).ForEachAsync(_ =>
-        {
-            Debug.LogError(111);
-        });
+        Debug.Log(SystemInfo.graphicsDeviceVendorID);
+        // button.OnClickAsAsyncEnumerable().Where((x, i) => i % 2 == 0).ForEachAsync(_ =>
+        // {
+        //     Debug.LogError(111);
+        // });
 
         // mainThread = Thread.CurrentThread;
         // ThreadStart threadStart = new ThreadStart(() =>
@@ -143,7 +145,7 @@ public class ThreadTest : MonoBehaviour
         var webRequest = UnityWebRequestTexture.GetTexture("https://lmg.jj20.com/up/allimg/tp09/210H51R3313N3-0-lp.jpg");
         var result = await webRequest.SendWebRequest();
         var tex = ((DownloadHandlerTexture)result.downloadHandler).texture;
-        Image.texture = tex;
+        //Image.texture = tex;
     }
 
     //private CancellationToken m_token = new CancellationToken();
@@ -257,5 +259,17 @@ public class ThreadTest : MonoBehaviour
     public class TestClasss
     {
         public int a = 10;
+    }
+    
+    public string Convert(string s, int numRows)
+    {
+        System.Text.StringBuilder sb = new StringBuilder();
+
+        var index = numRows;
+        for (int i = 0; i < s.Length; i++)
+        {
+            
+        }
+        return sb.ToString();
     }
 }
