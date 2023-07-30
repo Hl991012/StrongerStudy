@@ -17,15 +17,15 @@ public class CircleModel
     /// 唯一标识
     /// </summary>
     public string id;
-    public float radius;
+    public float diameter;
     public Vector2 curPos;
     public float moveSpeed;
     public MoveType moveType;
 
-    public CircleModel(float radius, Vector2 pos, float moveSpeed, MoveType moveType)
+    public CircleModel(float diameter, Vector2 pos, float moveSpeed, MoveType moveType)
     {
         id = System.Guid.NewGuid().ToString();
-        this.radius = radius;
+        this.diameter = diameter;
         this.curPos = pos;
         this.moveSpeed = moveSpeed;
         this.moveType = moveType;

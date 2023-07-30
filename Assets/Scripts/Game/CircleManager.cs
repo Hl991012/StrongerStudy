@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
+using Object = UnityEngine.Object;
 
 public class CircleManager : Singleton<CircleManager>
 {
@@ -12,9 +13,17 @@ public class CircleManager : Singleton<CircleManager>
     /// <summary>
     /// 创建圆形
     /// </summary>
-    public async UniTask CreatCircle()
+    public async UniTask<Circle> CreatCircle(float radius, Vector2 pos)
     {
-         //await Addressables.InstantiateAsync()
+        var enemyPrefab = await Addressables.LoadAssetAsync<GameObject>("Enemy");
+        var obj = Object.Instantiate(enemyPrefab);
+        var circle = obj.GetComponent<Circle>();
+        var circleModel = new CircleModel(radius, pos, 0, CircleModel.MoveType.None);
+        circle.Init(circleModel);
+        var transform = circle.transform;
+        transform.localScale = Vector2.one * radius;
+        transform.position = pos;
+        return circle;
     }
     
 }
