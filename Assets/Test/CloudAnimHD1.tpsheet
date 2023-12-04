@@ -1,0 +1,22 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:34336471820488075e0e5a6284d189fd:3878f95037def29fccbc0ec44231c48a:a9186670bd3fddaceeaf1bdcb5b39d54$
+#
+:format=40300
+:texture=CloudAnimHD1.png
+:size=1024x1024
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+13;1;804;298;219; 0.5;0.5; 0;0;0;0
+14;311;804;298;219; 0.5;0.5; 0;0;0;0
+15;621;804;298;219; 0.5;0.5; 0;0;0;0
+17;1;573;298;219; 0.5;0.5; 0;0;0;0
+18;1;342;298;219; 0.5;0.5; 0;0;0;0
+19;1;111;298;219; 0.5;0.5; 0;0;0;0
+20;311;573;298;219; 0.5;0.5; 0;0;0;0

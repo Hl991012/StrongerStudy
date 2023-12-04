@@ -9,7 +9,7 @@ public class Player : Circle
     
     private void Awake()
     {
-        Init(new CircleModel(1, Vector2.zero, 0, CircleModel.MoveType.None));
+        Init(new CircleModel(0.66f, Vector2.zero, 0, CircleModel.MoveType.None));
         transform.localScale = Vector3.one * CircleModel.diameter;
 
         InputManager.Instance.OnInputDirStateChanged += OnInputDirStateChanged;

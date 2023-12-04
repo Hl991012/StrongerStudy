@@ -58,7 +58,7 @@ Shader"Study/NormalMap_Fragement"
                     o.uv.xy = i.texCoord.xy * _MainTex_ST.xy + _MainTex_ST.zw;
                     o.uv.zw = i.texCoord.xy * _BumpMap_ST.xy + _BumpMap_ST.zw;
 
-                    float3 worldPos = UnityObjectToClipPos(i.vert);
+                    float3 worldPos = mul(unity_ObjectToWorld ,i.vert);
                     float3 worldNormal = UnityObjectToWorldNormal(i.normal);
                     float3 worldTangent = UnityObjectToWorldDir(i.tangent);
                     float3 worldBiNormal = cross(worldNormal, worldTangent) * i.tangent.w;

@@ -4,11 +4,13 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using UnityEngine;
+using UnityEngine.UI;
 using Debug = UnityEngine.Debug;
 
 public class TestStream : MonoBehaviour
 {
     private Test1 Test1 = new();
+    public Button button;
     
     void Start()
     {
