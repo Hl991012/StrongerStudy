@@ -69,8 +69,8 @@
      <Compile Include="Assets\Plugins\AmplifyShaderEditor\Plugins\Editor\Nodes\Misc\FresnelNode.cs" />
      <Compile Include="Assets\Plugins\AmplifyShaderEditor\Plugins\Editor\Nodes\Constants\ShaderVariables\Transform\TransformVariables.cs" />
      <Compile Include="Assets\Plugins\AmplifyShaderEditor\Plugins\Editor\Nodes\HelperFuncs\UnityObjToClipPosHlpNode.cs" />
-     <Compile Include="Assets\Plugins\AmplifyShaderEditor\Plugins\Editor\Nodes\Constants\ShaderVariables\Various\PrimitiveIdVariableNode.cs" />
      <Compile Include="Assets\Plugins\AmplifyShaderEditor\Plugins\Editor\Templates\TemplatePass.cs" />
+     <Compile Include="Assets\Plugins\AmplifyShaderEditor\Plugins\Editor\Nodes\Constants\ShaderVariables\Various\PrimitiveIdVariableNode.cs" />
      <Compile Include="Assets\Plugins\AmplifyShaderEditor\Plugins\Editor\Native\FallbackString.cs" />
      <Compile Include="Assets\Plugins\AmplifyShaderEditor\Plugins\Editor\Nodes\Constants\ShaderVariables\Transform\InverseProjectionMatrixNode.cs" />
      <Compile Include="Assets\Plugins\AmplifyShaderEditor\Plugins\Editor\Nodes\Vertex\TangentVertexDataNode.cs" />
@@ -1012,6 +1012,9 @@
      <Reference Include="UnityEditor.Android.Extensions">
      <HintPath>E:\Unity2021\2021.3.20f1\Editor\Data\PlaybackEngines\AndroidPlayer\UnityEditor.Android.Extensions.dll</HintPath>
      </Reference>
+     <Reference Include="UnityEditor.iOS.Extensions">
+     <HintPath>E:\Unity2021\2021.3.20f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.dll</HintPath>
+     </Reference>
      <Reference Include="UnityEditor.WindowsStandalone.Extensions">
      <HintPath>E:\Unity2021\2021.3.20f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
      </Reference>
@@ -1059,6 +1062,12 @@
      </Reference>
      <Reference Include="nunit.framework">
      <HintPath>F:\WORK\StrongerStudy\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+     <HintPath>E:\Unity2021\2021.3.20f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.iOS.Extensions.Common">
+     <HintPath>E:\Unity2021\2021.3.20f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Common.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Android.Types">
      <HintPath>E:\Unity2021\2021.3.20f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>

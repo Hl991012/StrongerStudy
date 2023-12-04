@@ -21,6 +21,7 @@ public class MainUI : MonoBehaviour
         {
             
         });
+        
     }
 
     private void OnInputDirStateChanged(bool active)

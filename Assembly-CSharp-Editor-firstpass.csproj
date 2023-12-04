@@ -42,7 +42,41 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Plugins\SerializableDictionary\Editor\SerializableDictionaryPropertyDrawer.cs" />
+     <Folder Include="Assets\Plugins\Editor\JetBrains.RiderFlow\InstallationData\Resources" />
      <Folder Include="Assets\Plugins\SerializableDictionary\Editor" />
+     <None Include="Assets\Plugins\Editor\JetBrains.RiderFlow\InstallationData\Resources\HDRPSceneHighlighting.txt" />
+     <Folder Include="Assets\Plugins\Editor" />
+     <Folder Include="Assets\Plugins\Editor\JetBrains.RiderFlow\InstallationData\Resources\Fonts" />
+     <None Include="Assets\Plugins\Editor\JetBrains.RiderFlow\hash.linux-x64.txt" />
+     <Folder Include="Assets\Plugins\Editor\JetBrains.RiderFlow\InstallationData" />
+     <Folder Include="Assets\Plugins\Editor\JetBrains.RiderFlow\InstallationData\Resources\Fonts\JetBrainsMono-1.0.3\ttf" />
+     <None Include="Assets\Plugins\Editor\JetBrains.RiderFlow\hash.windows-arm64.txt" />
+     <None Include="Assets\Plugins\Editor\JetBrains.RiderFlow\InstallationData\Resources\URPSceneHighlighting.txt" />
+     <None Include="Assets\Plugins\Editor\JetBrains.RiderFlow\build.txt" />
+     <Folder Include="Assets\Plugins\Editor\JetBrains.RiderFlow\InstallationData\Resources\SearchEverywhereNew" />
+     <None Include="Assets\Plugins\Editor\JetBrains.RiderFlow\hash.macos-x64.txt" />
+     <Folder Include="Assets\Plugins\Editor\JetBrains.RiderFlow\InstallationData\Resources\Toolbar" />
+     <Folder Include="Assets\Plugins\Editor\JetBrains.RiderFlow\InstallationData\Resources\SceneHierarchy" />
+     <None Include="Assets\Plugins\Editor\JetBrains.RiderFlow\InstallationData\Resources\RiderFlowResourceMarker.txt" />
+     <Folder Include="Assets\Plugins\Editor\JetBrains.RiderFlow" />
+     <None Include="Assets\Plugins\Editor\JetBrains.RiderFlow\hash.plugin.txt" />
+     <Folder Include="Assets\Plugins\Editor\JetBrains.RiderFlow\InstallationData\LogConfiguration" />
+     <Folder Include="Assets\Plugins\Editor\JetBrains.RiderFlow\InstallationData\Resources\Search" />
+     <Folder Include="Assets\Plugins\Editor\JetBrains.RiderFlow\InstallationData\Resources\Fonts\JetBrainsMono-1.0.3" />
+     <None Include="Assets\Plugins\Editor\JetBrains.RiderFlow\EULA.txt" />
+     <Folder Include="Assets\Plugins\Editor\JetBrains.RiderFlow\InstallationData\Resources\Logo" />
+     <None Include="Assets\Plugins\Editor\JetBrains.RiderFlow\InstallationData\Resources\SceneHighlighting.shader" />
+     <None Include="Assets\Plugins\Editor\JetBrains.RiderFlow\InstallationData\LogConfiguration\frontend-log.xml" />
+     <None Include="Assets\Plugins\Editor\JetBrains.RiderFlow\hash.linux-arm64.txt" />
+     <None Include="Assets\Plugins\Editor\JetBrains.RiderFlow\hash.macos-arm64.txt" />
+     <None Include="Assets\Plugins\Editor\JetBrains.RiderFlow\InstallationData\LogConfiguration\backend-log.xml" />
+     <Folder Include="Assets\Plugins\Editor\JetBrains.RiderFlow\InstallationData\Resources\ReEditor" />
+     <None Include="Assets\Plugins\Editor\JetBrains.RiderFlow\hash.txt" />
+     <None Include="Assets\Plugins\Editor\JetBrains.RiderFlow\package.json" />
+     <Folder Include="Assets\Plugins\Editor\JetBrains.RiderFlow\InstallationData\Resources\Completion" />
+     <None Include="Assets\Plugins\Editor\JetBrains.RiderFlow\InstallationData\Resources\ReEditor\RiderLight.xml" />
+     <None Include="Assets\Plugins\Editor\JetBrains.RiderFlow\InstallationData\Resources\ReEditor\RiderDark.xml" />
+     <Folder Include="Assets\Plugins\Editor\JetBrains.RiderFlow\InstallationData\Resources\FindUsages" />
      <Reference Include="UnityEngine">
      <HintPath>E:\Unity2021\2021.3.20f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>
@@ -298,6 +332,9 @@
      <Reference Include="UnityEditor.Android.Extensions">
      <HintPath>E:\Unity2021\2021.3.20f1\Editor\Data\PlaybackEngines\AndroidPlayer\UnityEditor.Android.Extensions.dll</HintPath>
      </Reference>
+     <Reference Include="UnityEditor.iOS.Extensions">
+     <HintPath>E:\Unity2021\2021.3.20f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.dll</HintPath>
+     </Reference>
      <Reference Include="UnityEditor.WindowsStandalone.Extensions">
      <HintPath>E:\Unity2021\2021.3.20f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
      </Reference>
@@ -345,6 +382,12 @@
      </Reference>
      <Reference Include="nunit.framework">
      <HintPath>F:\WORK\StrongerStudy\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+     <HintPath>E:\Unity2021\2021.3.20f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.iOS.Extensions.Common">
+     <HintPath>E:\Unity2021\2021.3.20f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Common.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Android.Types">
      <HintPath>E:\Unity2021\2021.3.20f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
@@ -805,14 +848,20 @@
      <Reference Include="Unity.VisualScripting.Flow.Editor">
      <HintPath>F:\WORK\StrongerStudy\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.2D.Tilemap.Extras">
+     <HintPath>F:\WORK\StrongerStudy\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.Tilemap.Editor">
+     <HintPath>F:\WORK\StrongerStudy\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.RenderPipelines.Universal.Runtime">
      <HintPath>F:\WORK\StrongerStudy\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
      </Reference>
-     <Reference Include="PPv2URPConverters">
-     <HintPath>F:\WORK\StrongerStudy\Library\ScriptAssemblies\PPv2URPConverters.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.VisualStudio.Editor">
      <HintPath>F:\WORK\StrongerStudy\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="PPv2URPConverters">
+     <HintPath>F:\WORK\StrongerStudy\Library\ScriptAssemblies\PPv2URPConverters.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline">
      <HintPath>F:\WORK\StrongerStudy\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
@@ -826,6 +875,9 @@
      <Reference Include="Unity.Burst.Editor">
      <HintPath>F:\WORK\StrongerStudy\Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.2D.Sprite.Editor">
+     <HintPath>F:\WORK\StrongerStudy\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.RenderPipelines.Core.Runtime">
      <HintPath>F:\WORK\StrongerStudy\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
      </Reference>
@@ -838,14 +890,17 @@
      <Reference Include="Unity.Postprocessing.Editor">
      <HintPath>F:\WORK\StrongerStudy\Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.VisualScripting.Flow">
-     <HintPath>F:\WORK\StrongerStudy\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.PlasticSCM.Editor">
      <HintPath>F:\WORK\StrongerStudy\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.2D.Tilemap.Extras.Editor">
+     <HintPath>F:\WORK\StrongerStudy\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="UniTask.Linq">
      <HintPath>F:\WORK\StrongerStudy\Library\ScriptAssemblies\UniTask.Linq.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Flow">
+     <HintPath>F:\WORK\StrongerStudy\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Core">
      <HintPath>F:\WORK\StrongerStudy\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
@@ -889,18 +944,23 @@
      <Reference Include="Unity.VisualScripting.State">
      <HintPath>F:\WORK\StrongerStudy\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.2D.Sprite.Editor">
-     <HintPath>F:\WORK\StrongerStudy\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
-     </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
       <Project>{ca6862c3-5c72-30f5-aa35-bf5f7cdd0158}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
+    <ProjectReference Include="FangAutoTile.csproj">
+      <Project>{685a5691-cae2-685e-6224-b4292d894b3c}</Project>
+      <Name>FangAutoTile</Name>
+    </ProjectReference>
     <ProjectReference Include="AmplifyShaderEditor.csproj">
       <Project>{a6d9baee-a7c7-22ff-7e3b-68084438a0b8}</Project>
       <Name>AmplifyShaderEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="FangAutoTile.Editor.csproj">
+      <Project>{ff9358c7-95b9-ae51-d82b-26a65106bc9e}</Project>
+      <Name>FangAutoTile.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

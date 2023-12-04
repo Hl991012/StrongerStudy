@@ -388,6 +388,12 @@
      <Reference Include="ReportGeneratorMerged">
      <HintPath>F:\WORK\StrongerStudy\Library\PackageCache\com.unity.testtools.codecoverage@1.2.2\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
      </Reference>
+     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+     <HintPath>E:\Unity2021\2021.3.20f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.iOS.Extensions.Common">
+     <HintPath>E:\Unity2021\2021.3.20f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Common.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Android.Types">
      <HintPath>E:\Unity2021\2021.3.20f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
      </Reference>
@@ -832,14 +838,20 @@
      <Reference Include="Unity.VisualScripting.Flow.Editor">
      <HintPath>F:\WORK\StrongerStudy\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.2D.Tilemap.Extras">
+     <HintPath>F:\WORK\StrongerStudy\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.Tilemap.Editor">
+     <HintPath>F:\WORK\StrongerStudy\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.RenderPipelines.Universal.Runtime">
      <HintPath>F:\WORK\StrongerStudy\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
      </Reference>
-     <Reference Include="PPv2URPConverters">
-     <HintPath>F:\WORK\StrongerStudy\Library\ScriptAssemblies\PPv2URPConverters.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.VisualStudio.Editor">
      <HintPath>F:\WORK\StrongerStudy\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="PPv2URPConverters">
+     <HintPath>F:\WORK\StrongerStudy\Library\ScriptAssemblies\PPv2URPConverters.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline">
      <HintPath>F:\WORK\StrongerStudy\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
@@ -853,6 +865,9 @@
      <Reference Include="Unity.Burst.Editor">
      <HintPath>F:\WORK\StrongerStudy\Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.2D.Sprite.Editor">
+     <HintPath>F:\WORK\StrongerStudy\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.RenderPipelines.Core.Runtime">
      <HintPath>F:\WORK\StrongerStudy\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
      </Reference>
@@ -865,14 +880,17 @@
      <Reference Include="Unity.Postprocessing.Editor">
      <HintPath>F:\WORK\StrongerStudy\Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.VisualScripting.Flow">
-     <HintPath>F:\WORK\StrongerStudy\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.PlasticSCM.Editor">
      <HintPath>F:\WORK\StrongerStudy\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.2D.Tilemap.Extras.Editor">
+     <HintPath>F:\WORK\StrongerStudy\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="UniTask.Linq">
      <HintPath>F:\WORK\StrongerStudy\Library\ScriptAssemblies\UniTask.Linq.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Flow">
+     <HintPath>F:\WORK\StrongerStudy\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Core">
      <HintPath>F:\WORK\StrongerStudy\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
@@ -916,14 +934,19 @@
      <Reference Include="Unity.VisualScripting.State">
      <HintPath>F:\WORK\StrongerStudy\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.2D.Sprite.Editor">
-     <HintPath>F:\WORK\StrongerStudy\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
-     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="FangAutoTile.csproj">
+      <Project>{685a5691-cae2-685e-6224-b4292d894b3c}</Project>
+      <Name>FangAutoTile</Name>
+    </ProjectReference>
     <ProjectReference Include="AmplifyShaderEditor.csproj">
       <Project>{a6d9baee-a7c7-22ff-7e3b-68084438a0b8}</Project>
       <Name>AmplifyShaderEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="FangAutoTile.Editor.csproj">
+      <Project>{ff9358c7-95b9-ae51-d82b-26a65106bc9e}</Project>
+      <Name>FangAutoTile.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
