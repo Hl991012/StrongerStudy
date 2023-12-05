@@ -17,15 +17,15 @@ public class LoadSceneAsync : MonoBehaviour
 
     private void Awake()
     {
-        coroutine = StartCoroutine(StartLoadScene());
-         SceneManager.LoadSceneAsync("GameScene").ToUniTask(Progress.Create<float>(
-             (p) =>
-         {
-             progressSlider.fillAmount = p;
-             progress.text = $"{p * 100:F2}%";
-         }));
-
-        
+        //coroutine = StartCoroutine(StartLoadScene());
+        SceneManager.LoadSceneAsync("GameScene").ToUniTask(Progress.Create<float>(
+            (p) => 
+            { 
+                progressSlider.fillAmount = p; 
+                progress.text = $"{p * 100:F2}%"; 
+                Debug.LogError(progress.text);
+            })
+        );
     }
 
     private void Update()

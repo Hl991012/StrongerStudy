@@ -1,5 +1,3 @@
-using System;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
@@ -7,11 +5,14 @@ using UnityEngine.UI;
 
 public class ButtonExtension : Button
 {
+    #region 单机双击相关
+
     public bool singleClickEnabled = true;
     public bool doubleClickEnabled = false;
     public float doubleClickTime = 0.3f;
+    
     private float lastClickTime = float.NegativeInfinity;
-    private int thisTimeClickCount = 0;
+    private int clickCount = 0;
     
     [FormerlySerializedAs("onDoubleClick")]
     [SerializeField]
@@ -22,48 +23,46 @@ public class ButtonExtension : Button
         get => doubleClickEvent;
         set => doubleClickEvent = value;
     }
-    
+
     public override void OnPointerClick(PointerEventData eventData)
     {
         if(!IsActive() && !interactable) 
             return;
-        
-        thisTimeClickCount++;
-        switch (thisTimeClickCount)
+
+        if (singleClickEnabled)
         {
-            case 1:
-                lastClickTime = Time.unscaledTime;
-                if (singleClickEnabled)
-                {
-                    UISystemProfilerApi.AddMarker("Button.onClick", this);
-                    onClick?.Invoke();
-                    Debug.LogError("单机1");   
-                }
-                break;
-            case 2:
+            UISystemProfilerApi.AddMarker("Button.onClick", this);
+            onClick?.Invoke();
+            Debug.LogError("单击");   
+        }
+
+        if (doubleClickEnabled)
+        {
+            clickCount++;
+            if (clickCount >= 2)
+            {
                 if (Time.realtimeSinceStartup - lastClickTime < doubleClickTime)
                 {
-                    if (doubleClickEnabled)
-                    {
-                        doubleClickEvent?.Invoke();
-                        Debug.LogError("双击");
-                    }
+                    UISystemProfilerApi.AddMarker("Button.onDoubleClick", this);
+                    onDoubleClick?.Invoke();
+                    Debug.LogError("双击");
                     lastClickTime = float.NegativeInfinity;
-                    thisTimeClickCount = 0;   
+                    clickCount = 0;   
                 }
                 else
                 {
-                    if (singleClickEnabled)
-                    {
-                        base.OnPointerClick(eventData);
-                        Debug.LogError("单机2");
-                    }
+                    clickCount = 1;
                     lastClickTime = Time.unscaledTime;
-                    thisTimeClickCount = 1;   
                 }
-                break;
+            }
+            else
+            {
+                lastClickTime = Time.unscaledTime;
+            }
         }
     }
+
+    #endregion
 
     #region 长按相关
 
@@ -73,9 +72,13 @@ public class ButtonExtension : Button
     
     public float minPressTime = 0.5f;
 
-    public ButtonClickedEvent longPressEvent = new();
-    
     private bool isPressing = false;
+    
+    private bool hasInvokedLongPress = false;
+
+    [FormerlySerializedAs("onLongPress")]
+    [SerializeField]
+    private ButtonClickedEvent longPressEvent = new();
     
     public ButtonClickedEvent onLongPress
     {
@@ -88,29 +91,37 @@ public class ButtonExtension : Button
         base.OnPointerDown(eventData);
         if (longPressEnabled)
         {
+            hasInvokedLongPress = false;
+            isPressing = true;
             lastPressTime = Time.unscaledTime;   
-        }
-    }
-    
-    //override OnMo
-
-    public override void OnPointerExit(PointerEventData eventData)
-    {
-        base.OnPointerExit(eventData);
-        if (Time.unscaledTime - lastPressTime >= minPressTime)
-        {
-            onLongPress?.Invoke();
         }
     }
 
     public override void OnPointerUp(PointerEventData eventData)
     {
         base.OnPointerUp(eventData);
+        isPressing = false;
+        hasInvokedLongPress = false;
     }
 
     private void Update()
     {
-        
+        DealLongPress();
+    }
+    
+    private void DealLongPress()
+    {
+        if(hasInvokedLongPress) return;
+        if (isPressing)
+        {
+            if (Time.unscaledTime - lastPressTime >= minPressTime)
+            {
+                UISystemProfilerApi.AddMarker("Button.onLongPress", this);
+                onLongPress?.Invoke();
+                hasInvokedLongPress = true;
+                Debug.LogError("执行长按事件");
+            }
+        }
     }
 
     #endregion

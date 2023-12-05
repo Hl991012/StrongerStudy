@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor;
-using UnityEngine.UI;
 
 namespace UnityEditor.UI
 {
@@ -12,14 +8,16 @@ namespace UnityEditor.UI
     {
         private ButtonExtension buttonExtension;
 
-        SerializedProperty m_OnDoubleClickProperty;
-        SerializedProperty m_OnClickProperty;
+        SerializedProperty onDoubleClickProperty;
+        SerializedProperty onClickProperty;
+        SerializedProperty onLongPressProperty;
         
         protected override void OnEnable()
         {
             base.OnEnable();
-            m_OnDoubleClickProperty = serializedObject.FindProperty("doubleClickEvent");
-            m_OnClickProperty = serializedObject.FindProperty("m_OnClick");
+            onDoubleClickProperty = serializedObject.FindProperty("doubleClickEvent");
+            onClickProperty = serializedObject.FindProperty("m_OnClick");
+            onLongPressProperty = serializedObject.FindProperty("longPressEvent");
         }
 
         public override void OnInspectorGUI()
@@ -33,7 +31,8 @@ namespace UnityEditor.UI
             if (buttonExtension.singleClickEnabled)
             {
                 buttonExtension.doubleClickEnabled = false;
-                EditorGUILayout.PropertyField(m_OnClickProperty);  
+                buttonExtension.longPressEnabled = false;
+                EditorGUILayout.PropertyField(onClickProperty);  
             }
             
             buttonExtension.doubleClickEnabled = EditorGUILayout.Toggle("启用双击", buttonExtension.doubleClickEnabled);
@@ -41,7 +40,17 @@ namespace UnityEditor.UI
             {
                 buttonExtension.doubleClickTime = EditorGUILayout.FloatField("双击间隔", buttonExtension.doubleClickTime);
                 buttonExtension.singleClickEnabled = false;
-                EditorGUILayout.PropertyField(m_OnDoubleClickProperty);
+                buttonExtension.longPressEnabled = false;
+                EditorGUILayout.PropertyField(onDoubleClickProperty);
+            }
+            
+            buttonExtension.longPressEnabled = EditorGUILayout.Toggle("启用长按", buttonExtension.longPressEnabled);
+            if(buttonExtension.longPressEnabled)
+            {
+                buttonExtension.minPressTime = EditorGUILayout.FloatField("长按时间", buttonExtension.minPressTime);
+                buttonExtension.singleClickEnabled = false;
+                buttonExtension.doubleClickEnabled = false;
+                EditorGUILayout.PropertyField(onLongPressProperty);
             }
             
             serializedObject.ApplyModifiedProperties();
