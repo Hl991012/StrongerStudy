@@ -347,20 +347,41 @@
      <Reference Include="log4netPlastic">
      <HintPath>D:\Softs\Fork\StrongerStudy\Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
      </Reference>
-     <Reference Include="Google.Protobuf">
-     <HintPath>D:\Softs\Fork\StrongerStudy\Library\PackageCache\com.unity.barracuda@3.0.0\Barracuda\Runtime\Plugins\ProtoBuffer\Google.Protobuf.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.Burst.Cecil.Rocks">
      <HintPath>D:\Softs\Fork\StrongerStudy\Library\PackageCache\com.unity.burst@1.8.2\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
      <HintPath>D:\Softs\Fork\StrongerStudy\Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
      </Reference>
+     <Reference Include="Google.Protobuf">
+     <HintPath>D:\Softs\Fork\StrongerStudy\Library\PackageCache\com.unity.barracuda@3.0.0\Barracuda\Runtime\Plugins\ProtoBuffer\Google.Protobuf.dll</HintPath>
+     </Reference>
      <Reference Include="unityplastic">
      <HintPath>D:\Softs\Fork\StrongerStudy\Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
      </Reference>
      <Reference Include="ReportGeneratorMerged">
      <HintPath>D:\Softs\Fork\StrongerStudy\Library\PackageCache\com.unity.testtools.codecoverage@1.2.2\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
+     </Reference>
+     <Reference Include="I18N.Rare">
+     <HintPath>D:\Softs\Fork\StrongerStudy\Assets\F8Framework-main\Plugins\I18N.Rare.dll</HintPath>
+     </Reference>
+     <Reference Include="I18N.MidEast">
+     <HintPath>D:\Softs\Fork\StrongerStudy\Assets\F8Framework-main\Plugins\I18N.MidEast.dll</HintPath>
+     </Reference>
+     <Reference Include="I18N">
+     <HintPath>D:\Softs\Fork\StrongerStudy\Assets\F8Framework-main\Plugins\I18N.dll</HintPath>
+     </Reference>
+     <Reference Include="I18N.West">
+     <HintPath>D:\Softs\Fork\StrongerStudy\Assets\F8Framework-main\Plugins\I18N.West.dll</HintPath>
+     </Reference>
+     <Reference Include="I18N.CJK">
+     <HintPath>D:\Softs\Fork\StrongerStudy\Assets\F8Framework-main\Plugins\I18N.CJK.dll</HintPath>
+     </Reference>
+     <Reference Include="I18N.Other">
+     <HintPath>D:\Softs\Fork\StrongerStudy\Assets\F8Framework-main\Plugins\I18N.Other.dll</HintPath>
+     </Reference>
+     <Reference Include="F8Framework.F8ExcelDataClass">
+     <HintPath>D:\Softs\Fork\StrongerStudy\Assets\F8Framework\ConfigData\F8ExcelDataClass\F8Framework.F8ExcelDataClass.dll</HintPath>
      </Reference>
      <Reference Include="nunit.framework">
      <HintPath>D:\Softs\Fork\StrongerStudy\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
@@ -800,6 +821,9 @@
      <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
      <HintPath>D:\Softs\Fork\StrongerStudy\Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
      </Reference>
+     <Reference Include="UnityWebSocket.Editor">
+     <HintPath>D:\Softs\Fork\StrongerStudy\Library\ScriptAssemblies\UnityWebSocket.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.EditorCoroutines.Editor">
      <HintPath>D:\Softs\Fork\StrongerStudy\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
      </Reference>
@@ -830,23 +854,29 @@
      <Reference Include="Unity.VisualScripting.Flow.Editor">
      <HintPath>D:\Softs\Fork\StrongerStudy\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.2D.Tilemap.Extras">
+     <HintPath>D:\Softs\Fork\StrongerStudy\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Barracuda.BurstBLAS">
      <HintPath>D:\Softs\Fork\StrongerStudy\Library\ScriptAssemblies\Unity.Barracuda.BurstBLAS.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Barracuda.ONNX">
      <HintPath>D:\Softs\Fork\StrongerStudy\Library\ScriptAssemblies\Unity.Barracuda.ONNX.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.2D.Tilemap.Editor">
+     <HintPath>D:\Softs\Fork\StrongerStudy\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.RenderPipelines.Universal.Runtime">
      <HintPath>D:\Softs\Fork\StrongerStudy\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
-     </Reference>
-     <Reference Include="PPv2URPConverters">
-     <HintPath>D:\Softs\Fork\StrongerStudy\Library\ScriptAssemblies\PPv2URPConverters.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualStudio.Editor">
      <HintPath>D:\Softs\Fork\StrongerStudy\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Barracuda">
      <HintPath>D:\Softs\Fork\StrongerStudy\Library\ScriptAssemblies\Unity.Barracuda.dll</HintPath>
+     </Reference>
+     <Reference Include="PPv2URPConverters">
+     <HintPath>D:\Softs\Fork\StrongerStudy\Library\ScriptAssemblies\PPv2URPConverters.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline">
      <HintPath>D:\Softs\Fork\StrongerStudy\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
@@ -875,17 +905,23 @@
      <Reference Include="Unity.Postprocessing.Editor">
      <HintPath>D:\Softs\Fork\StrongerStudy\Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.VisualScripting.Flow">
-     <HintPath>D:\Softs\Fork\StrongerStudy\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.PlasticSCM.Editor">
      <HintPath>D:\Softs\Fork\StrongerStudy\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.Tilemap.Extras.Editor">
+     <HintPath>D:\Softs\Fork\StrongerStudy\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
      </Reference>
      <Reference Include="UniTask.Linq">
      <HintPath>D:\Softs\Fork\StrongerStudy\Library\ScriptAssemblies\UniTask.Linq.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.VisualScripting.Flow">
+     <HintPath>D:\Softs\Fork\StrongerStudy\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.VisualScripting.Core">
      <HintPath>D:\Softs\Fork\StrongerStudy\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityWebSocket.Runtime">
+     <HintPath>D:\Softs\Fork\StrongerStudy\Library\ScriptAssemblies\UnityWebSocket.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Mathematics">
      <HintPath>D:\Softs\Fork\StrongerStudy\Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
@@ -951,6 +987,10 @@
       <Project>{a4db4069-42cf-7cf3-1bba-117bcaa387af}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
+    <ProjectReference Include="FangAutoTile.csproj">
+      <Project>{685a5691-cae2-685e-6224-b4292d894b3c}</Project>
+      <Name>FangAutoTile</Name>
+    </ProjectReference>
     <ProjectReference Include="SingularityGroup.HotReload.Runtime.Public.csproj">
       <Project>{5f5615e4-ac28-2002-4d94-7eee482dfb8c}</Project>
       <Name>SingularityGroup.HotReload.Runtime.Public</Name>
@@ -958,6 +998,50 @@
     <ProjectReference Include="AmplifyShaderEditor.csproj">
       <Project>{a6d9baee-a7c7-22ff-7e3b-68084438a0b8}</Project>
       <Name>AmplifyShaderEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="FangAutoTile.Editor.csproj">
+      <Project>{ff9358c7-95b9-ae51-d82b-26a65106bc9e}</Project>
+      <Name>FangAutoTile.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Excel.csproj">
+      <Project>{78dc450e-9b6f-5412-2e5c-dc8ee131e179}</Project>
+      <Name>Excel</Name>
+    </ProjectReference>
+    <ProjectReference Include="F8Framework.Tests.csproj">
+      <Project>{4a380624-a76c-9111-73d6-7017141f93ab}</Project>
+      <Name>F8Framework.Tests</Name>
+    </ProjectReference>
+    <ProjectReference Include="LitJson.csproj">
+      <Project>{13de7617-5fc2-0fca-42fc-6fc9a413f4e8}</Project>
+      <Name>LitJson</Name>
+    </ProjectReference>
+    <ProjectReference Include="F8Framework.Core.Editor.csproj">
+      <Project>{97b3c175-5b7b-2d35-af63-6426bcddd25c}</Project>
+      <Name>F8Framework.Core.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="MessagePack.csproj">
+      <Project>{250eecbd-9dc8-5618-6a95-167a0fbc4049}</Project>
+      <Name>MessagePack</Name>
+    </ProjectReference>
+    <ProjectReference Include="Telepathy.csproj">
+      <Project>{d95e4c48-97a3-9d0b-0b3f-e9a1e44275a8}</Project>
+      <Name>Telepathy</Name>
+    </ProjectReference>
+    <ProjectReference Include="kcp.csproj">
+      <Project>{6ba2e78c-2a19-82ab-5aa6-371e1321f669}</Project>
+      <Name>kcp</Name>
+    </ProjectReference>
+    <ProjectReference Include="F8Framework.Core.csproj">
+      <Project>{0bd78e54-9f0f-0818-f50d-ecca90c24b64}</Project>
+      <Name>F8Framework.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="ICSharpCode.SharpZipLib.csproj">
+      <Project>{d3f9bdd7-3722-a70e-7d2e-f53f62c080ac}</Project>
+      <Name>ICSharpCode.SharpZipLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="SimpleWebTransport.csproj">
+      <Project>{340f94a2-b8fe-9d7e-f774-eaaaa2c86aff}</Project>
+      <Name>SimpleWebTransport</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
